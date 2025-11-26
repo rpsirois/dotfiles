@@ -1,0 +1,12 @@
+[submodule "vim/.vim/pack/preservim/start/nerdtree"]
+	path = vim/.vim/pack/preservim/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "vim/.vim/pack/sheerun/start/vim-polyglot"]
+	path = vim/.vim/pack/sheerun/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "vim/.vim/pack/sheerun/start/vim-wombat-scheme"]
+	path = vim/.vim/pack/sheerun/start/vim-wombat-scheme
+	url = https://github.com/sheerun/vim-wombat-scheme.git
+[submodule "vim/.vim/pack/tpope/start/sensible"]
+	path = vim/.vim/pack/tpope/start/sensible
+	url = https://tpope.io/vim/sensible.git
