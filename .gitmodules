@@ -10,3 +10,6 @@
 [submodule "vim/.vim/pack/tpope/start/sensible"]
 	path = vim/.vim/pack/tpope/start/sensible
 	url = https://tpope.io/vim/sensible.git
+[submodule "vim/.vim/pack/jsy-lang/start/vim-jsy"]
+	path = vim/.vim/pack/jsy-lang/start/vim-jsy
+	url = https://github.com/jsy-lang/vim-jsy.git

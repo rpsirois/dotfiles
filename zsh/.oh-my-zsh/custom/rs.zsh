@@ -13,3 +13,6 @@ alias vps_null="ssh a@b -i ~/.ssh/c"
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 tssh() { ssh "$@" | tee "ssh_session_$(date +%Y%m%dT%H%M%S)"; }
+
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
