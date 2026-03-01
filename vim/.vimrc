@@ -9,6 +9,8 @@ map <C-f> :NERDTreeFind<CR>
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " glsl highlighting for .fx files
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.fx set ft=glsl
+" jinja2
+autocmd! BufNewFile,BufRead,BufReadPost *.j2 set filetype=yaml.jinja2
 
 colorscheme wombat
 set guifont=Menlo-Regular:h14

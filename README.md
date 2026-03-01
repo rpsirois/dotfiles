@@ -10,10 +10,14 @@ Download with `git clone --recursive ...` as Vim plugins are loaded as Git submo
 
 Use [stow](https://www.gnu.org/software/stow/) to "install".
 
+## Adding New Vim Plugins
+
+`git add submodule https://... vim/.vim/pack/<author>/start/<repo>`
+
 ## Troubleshooting
 
 Remember, `stow` targets the parent directory by default.
 
-Here's a cheesy (mm, my favorite) to dry run removing the symlinks to see what's there (assuming you're running this from the `dotfiles` repo where `~` is the parent. Otherwise, change target with `-t ~`.
+Here's a cheesy command (mm, my favorite) to dry run removing the symlinks to see what's there (assuming you're running this from the `dotfiles` repo where `~` is the parent. Otherwise, change target with `-t ~`.
 
 `stow -Dnv */`
