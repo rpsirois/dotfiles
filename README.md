@@ -2,7 +2,7 @@
 
 Vim, of course. Uses native plugins.
 
-Zsh config is set up for an oh-my-zsh installation, otherwise move it to home.
+Zsh config is set up for an oh-my-zsh installation, otherwise move it to home. OMZ `/custom/sensitive.zsh` is Git ignored.
 
 ## Installation
 
