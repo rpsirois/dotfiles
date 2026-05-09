@@ -1,0 +1,16 @@
+# Splits - Tilix style
+keybind = ctrl+shift+e=new_split:right
+keybind = ctrl+shift+o=new_split:down
+keybind = ctrl+shift+x=close_surface
+
+# Navigate splits
+keybind = ctrl+alt+left=goto_split:left
+keybind = ctrl+alt+right=goto_split:right
+keybind = ctrl+alt+up=goto_split:top
+keybind = ctrl+alt+down=goto_split:bottom
+
+# Resize splits
+keybind = ctrl+shift+up=resize_split:up,10
+keybind = ctrl+shift+down=resize_split:down,10
+keybind = ctrl+shift+left=resize_split:left,10
+keybind = ctrl+shift+right=resize_split:right,10
