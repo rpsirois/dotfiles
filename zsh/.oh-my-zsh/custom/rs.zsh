@@ -34,6 +34,23 @@ alias sqlite3="sqlite3 -header -column"
 # tee a log from the ssh session locally
 tssh() { ssh "$@" | tee "ssh_session_$(date +%Y%m%dT%H%M%S)"; }
 
+# clean copies/archives (skip macOS cruft: .DS_Store, ._* AppleDouble files)
+cpclean() {
+  if [[ $# -lt 2 ]]; then
+    echo "usage: cpclean [rsync-opts] <src> <dst>" >&2
+    return 1
+  fi
+  COPYFILE_DISABLE=1 rsync -av --exclude='.DS_Store' --exclude='._*' "$@"
+}
+
+zipclean() {
+  if [[ $# -lt 2 ]]; then
+    echo "usage: zipclean <archive.zip> <files...>" >&2
+    return 1
+  fi
+  zip -r "$@" -x "*.DS_Store" -x "__MACOSX/*" -x "._*"
+}
+
 # -----------------------------------------------
 # specifc tech stack stuffs
 # -----------------------------------------------
