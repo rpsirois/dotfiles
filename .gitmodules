@@ -16,3 +16,9 @@
 [submodule "vim/.vim/pack/Glench/start/vim-jinja2-syntax"]
 	path = vim/.vim/pack/Glench/start/vim-jinja2-syntax
 	url = https://github.com/Glench/vim-jinja2-syntax
+[submodule "vim/.vim/pack/tpope/start/fugitive"]
+	path = vim/.vim/pack/tpope/start/fugitive
+	url = https://tpope.io/vim/fugitive.git
+[submodule "vim/.vim/pack/itchyny/start/lightline"]
+	path = vim/.vim/pack/itchyny/start/lightline
+	url = https://github.com/itchyny/lightline.vim.git
