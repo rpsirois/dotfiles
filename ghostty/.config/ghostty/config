@@ -1,3 +1,6 @@
+# Theme - COSMIC Dark (matches System76 COSMIC terminal)
+theme = cosmic-dark
+
 # Splits - Tilix style
 keybind = ctrl+shift+e=new_split:right
 keybind = ctrl+shift+o=new_split:down

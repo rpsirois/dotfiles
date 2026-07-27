@@ -1,0 +1,35 @@
+# COSMIC Dark - palette from pop-os/cosmic-term src/terminal_theme.rs (cosmic_dark()).
+# Background is not defined there (it inherits from the libcosmic desktop theme);
+# #1B1B1B matches COSMIC's normal-black and the terminal's on-screen appearance.
+background = 1B1B1B
+foreground = BEBEBE
+cursor-color = BEBEBE
+
+# COSMIC inverts fg/bg for selection (dark text on light) rather than tinting a
+# fixed background over the text, which washes it out. Match that behavior.
+selection-invert-fg-bg = true
+
+# normal
+palette = 0=#1B1B1B
+palette = 1=#F16161
+palette = 2=#7CB987
+palette = 3=#DDC74C
+palette = 4=#6296BE
+palette = 5=#BE6DEE
+palette = 6=#49BAC8
+palette = 7=#BEBEBE
+
+# bright
+# palette 8 (bright-black) deliberately darkened from COSMIC's #808080. TUIs
+# like Claude Code use bright-black as a subtle background block for messages;
+# COSMIC's light 50%-grey washes out light foreground text on it. #4D4D4D keeps
+# it a readable dark block while staying neutral. Signature colors below are
+# exact COSMIC values.
+palette = 8=#4D4D4D
+palette = 9=#FF8985
+palette = 10=#97D5A0
+palette = 11=#FAE365
+palette = 12=#7DB1DA
+palette = 13=#D68EFF
+palette = 14=#49BAC8
+palette = 15=#C4C4C4

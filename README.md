@@ -14,6 +14,13 @@ Use [stow](https://www.gnu.org/software/stow/) to "install".
 
 `git add submodule https://... vim/.vim/pack/<author>/start/<repo>`
 
+## Adding Files to an Existing Package
+
+`stow` is a one-shot linker, not a sync daemon. After adding a new file or
+subdirectory to a package (e.g. a new `themes/` dir under `ghostty/`), re-run
+`stow --restow <package>` (or `-R`) so the new links get created. Just editing
+the repo isn't enough.
+
 ## Troubleshooting
 
 Remember, `stow` targets the parent directory by default.

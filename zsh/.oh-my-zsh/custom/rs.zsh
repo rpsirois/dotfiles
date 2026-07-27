@@ -57,8 +57,9 @@ tarclean() {
     return 1
   fi
   local archive="$1" src="$2"
-  COPYFILE_DISABLE=1 tar -C "$(dirname "$src")" --exclude='.DS_Store' \
-    --exclude='._*' -czf "$archive" "$(basename "$src")"
+  # --no-xattrs/--no-mac-metadata/--no-acls avoid PAX xattr records GNU tar warns about
+  COPYFILE_DISABLE=1 tar -C "$(dirname "$src")" --no-xattrs --no-mac-metadata \
+    --no-acls --exclude='.DS_Store' --exclude='._*' -czf "$archive" "$(basename "$src")"
 }
 
 # -----------------------------------------------
