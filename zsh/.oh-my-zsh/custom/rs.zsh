@@ -52,14 +52,18 @@ zipclean() {
 }
 
 tarclean() {
-  if [[ $# -ne 2 ]]; then
-    echo "usage: tarclean <archive.tar.gz> <src-dir>" >&2
+  # usage: tarclean <archive.tar.gz> <src-dir> [extra tar args...]
+  # macOS-safe tar for Linux transfer. Any extra args are passed straight through
+  # to tar, so use normal tar flags: e.g. tarclean out.tgz ~/proj --exclude=.claude
+  if [[ $# -lt 2 ]]; then
+    echo "usage: tarclean <archive.tar.gz> <src-dir> [extra tar args...]" >&2
     return 1
   fi
-  local archive="$1" src="$2"
+  local archive="$1" src="$2"; shift 2
   # --no-xattrs/--no-mac-metadata/--no-acls avoid PAX xattr records GNU tar warns about
   COPYFILE_DISABLE=1 tar -C "$(dirname "$src")" --no-xattrs --no-mac-metadata \
-    --no-acls --exclude='.DS_Store' --exclude='._*' -czf "$archive" "$(basename "$src")"
+    --no-acls --exclude='.DS_Store' --exclude='._*' "$@" \
+    -czf "$archive" "$(basename "$src")"
 }
 
 # -----------------------------------------------
