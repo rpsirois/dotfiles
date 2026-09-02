@@ -4,7 +4,8 @@ theme = cosmic-dark
 # Splits - Tilix style
 keybind = ctrl+shift+e=new_split:right
 keybind = ctrl+shift+o=new_split:down
-keybind = ctrl+shift+x=close_surface
+keybind = ctrl+shift+x=toggle_window_zoom
+keybind = ctrl+shift+w=close_surface # ctrl+d by default
 
 # Navigate splits
 keybind = ctrl+alt+left=goto_split:left
