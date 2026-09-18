@@ -1,5 +1,4 @@
 set nocompatible
-syntax enable
 filetype off
 
 let mapleader = ","
@@ -25,6 +24,8 @@ colorscheme wombat
 set guifont=Menlo-Regular:h14
 
 filetype plugin indent on
+" after filetype, so ftplugins load before syntax scripts
+syntax enable
 
 set hlsearch
 hi Search guibg=LightBlue
